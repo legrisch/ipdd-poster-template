@@ -12,8 +12,6 @@
     <h1>YOUR POSTER HERE</h1>
   </div>
 
-  
-
   <script src="./scripts/main.js"></script>
   
   <!-- Leave this script in there, it's needed to communicate to it's parent window -->
