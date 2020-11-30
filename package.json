@@ -1,0 +1,31 @@
+{
+  "name": "ipdd-poster-template",
+  "version": "1.0.0",
+  "description": "",
+  "browser": "src/index.html",
+  "scripts": {
+    "test": "parcel test/index.html --open --dist-dir .tmp-dist",
+    "bundle": "node ./bundler/bundler.js"
+  },
+  "source": [
+    "test/index.html",
+    "src/index.html"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "adm-zip": "^0.5.1",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-zip": "^1.0.6",
+    "sass": "^1.29.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {}
+}
