@@ -105,3 +105,18 @@ pre code {
 a, a:visited, a:hover, a:active {
   color: inherit;
 }
+
+.card {
+  padding: 30px;
+  background-color: rgb(240, 194, 194);
+  border-radius: 30px;
+  margin: 40px 0;
+
+  &>:first-child {
+    margin-top: 0;
+  }
+
+  &>:last-child {
+    margin-bottom: 0;
+  }
+}

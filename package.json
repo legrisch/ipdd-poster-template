@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "parcel serve test/index.html --open",
+    "serve": "parcel serve src/index.html --open",
     "bundle": "node ./bundler/bundler.js"
   },
   "browser": "dist/index.html",
@@ -22,7 +23,6 @@
   "license": "ISC",
   "devDependencies": {
     "adm-zip": "^0.5.1",
-    "concurrently": "^5.3.0",
     "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
