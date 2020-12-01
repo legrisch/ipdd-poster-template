@@ -1,5 +1,8 @@
 @import "normalize/import-now";
 
+$pillColor: rgb(255, 184, 184);
+$dotColor: #b8d4fe;
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: rgb(255, 219, 219);
@@ -69,24 +72,55 @@ code {
   border-radius: 4px;
 }
 
+.pill {
+  padding: 1rem 2rem;
+  display: inline-block;
+  background-color: $pillColor;
+  align-self: flex-start;
+  border-radius: 999px;
+}
+
 button {
   background-color: rgb(255, 184, 184);
-  border-radius: 4px;
+  border-radius: 999px;
   border: none;
   outline: none;
-  padding: 6px 10px;
+  padding: 6px 20px;
+  position: relative;
+  height: 40px;
+  padding-left: 50px;
+  margin-right: 10px;
+
+  &:after {
+    content: '→';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $dotColor;
+    left: 0px;
+    top: 0;
+    border-radius: 999px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  &:hover {
+    background-color: rgb(244, 173, 173);
+    &:after {
+      background-color: darken($dotColor, $amount: 5)
+    }
+  }
+
+  &:active {
+    background-color: rgb(215, 136, 136);
+    &:after {
+      background-color: darken($dotColor, $amount: 8)
+    }
+  }
 }
 
 .buttons {
   margin: 20px 0;
-}
-
-button:hover {
-  background-color: rgb(244, 173, 173);
-}
-
-button:active {
-  background-color: rgb(215, 136, 136);
 }
 
 pre {
