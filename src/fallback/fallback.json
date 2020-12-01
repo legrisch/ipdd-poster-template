@@ -1,7 +1,5 @@
 {
   "fallbackImages": {
-    "600px": "600px.jpg",
-    "1000px": "1000px.jpg",
-    "300px": "300px"
+    "600px": "600px.jpg"
   }
 }

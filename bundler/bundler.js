@@ -1,5 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const Parcel = require('@parcel/core').default
 const path = require('path')
 const fs = require('fs')

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "parcel serve test/index.html --open --dist-dir .tmp-dist",
+    "test": "parcel serve test/index.html --open",
     "bundle": "node ./bundler/bundler.js"
   },
   "browser": "dist/index.html",

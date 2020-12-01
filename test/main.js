@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
 const iframe = document.getElementById('iframe')
 
-function setSize(px) {
-  iframe.width = px
-  iframe.height = px
-}
+const resizeButtons = Array.from(document.getElementsByClassName('resize-button'))
+resizeButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const width = parseInt(e.target.dataset.width, 10)
+    iframe.width = width
+    iframe.height = width
+  })
+})
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (e) => {
