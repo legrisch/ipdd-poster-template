@@ -4,7 +4,7 @@ import { join } from 'path'
 import ClipboardJS from 'clipboard'
 
 // eslint-disable-next-line no-new
-const clipboard = new ClipboardJS(':not(a) code', {
+const clipboard = new ClipboardJS('.copy code', {
   text: (trigger) => trigger.innerHTML,
 })
 

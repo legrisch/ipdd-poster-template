@@ -27,9 +27,9 @@ Now that we installed the basics we want to make sure that everything is running
 1. First, download this template by clicking "Code" → "Download zip". Unpack it in a meaningful location and and drag the top level directory (probably called "ipdd-poster-template") on the VS Code icon in the dock. This will open VS Code with this directory as your _Workspace_.
 
 2. Now that VS Code knows where to operate, open up a Terminal with _Terminal → New Terminal_, this opens a Terminal already in the currently opened directory/workspace – very handy as you don't have to [`cd`](https://www.macworld.com/article/2042378/master-the-command-line-navigating-files-and-folders.html) there.
-Type in `node --version` and hit return. It should print something like "v14.15.1" which tells you that Node.js is correctly installed and running whatever version it printed.
+Type in <span class="copy">`node --version`</span> and hit return. It should print something like "v14.15.1" which tells you that Node.js is correctly installed and running whatever version it printed.
 
-3. This template comes with a lot of features already built-in. To use them, we need to install the _dependencies_ – code that this template is depending upon. For this we make use of [npm](https://www.npmjs.com/), Node.js' built-in package manager. All we have to do is use the already opened terminal, type in `npm install` and hit return – this might take a while.
+3. This template comes with a lot of features already built-in. To use them, we need to install the _dependencies_ – code that this template is depending upon. For this we make use of [npm](https://www.npmjs.com/), Node.js' built-in package manager. All we have to do is use the already opened terminal, type in <span class="copy">`npm install`</span> and hit return – this might take a while.
 
 4. We will install an extension to VS Code called "ESLint". This extension integrates [ESLint](https://ESLint.org/) – a dependency of this template – in VS Code. Click [here](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-ESLint) to install the extension.  
 What ESLint does: as JavaScript doesn't need to be compiled in order to run there's no compiler that catches errors before the code is actually running. ESLint scans your JavaScript code for conformance and sets standards and guidelines. Basically it tries to make sure that you write JavaScript code that works by calling out possible errors beforehand and enforcing a coding style on our code.
@@ -39,7 +39,7 @@ What ESLint does: as JavaScript doesn't need to be compiled in order to run ther
 #### Starting up the development server
 
 So now that everything is ready we can start creating our poster. We fire up a local development server with a live preview which lets you see your poster in a real environment – an iframe in another page with certain dimensions.  
-Use the already opened terminal, type in `npm run test` and hit return. This not only starts the server but also openes your browser. As the development server is able to hot-module-reload, there's almost never the need to refresh the page when you make changes to your code.
+Use the already opened terminal, type in <span class="copy">`npm run test`</span> and hit return. This not only starts the server but also openes your browser. As the development server is able to hot-module-reload, there's almost never the need to refresh the page when you make changes to your code.
 
 #### Locations
 
@@ -79,7 +79,7 @@ Again: everything that is referenced from `src/index.html` or its references wil
 
 #### Wrapping it up a.k.a. Bundling
 
-So you are finished with your poster, heh? There's just one more thing to do: Use the terminal, type in `npm run bundle` and hit return. This starts a bundling process which collects all files used in your poster and produces a single .zip file. Send this file to us, you're done, congratulations! 🎉
+So you are finished with your poster, heh? There's just one more thing to do: Use the terminal, type in <span class="copy">`npm run bundle`</span> and hit return. This starts a bundling process which collects all files used in your poster and produces a single .zip file. Send this file to us, you're done, congratulations! 🎉
 
 </div>
 <div class="card">
@@ -111,8 +111,8 @@ I recommend using VS Code with the ESLint extension installed:
 
 1.  To download the template click on "Code" → "Download zip" or clone this git repository.
 2.  Open Terminal.app and go to the poster directory: cd /path/to/poster/directory or drag the poster directory onto the Terminal icon.
-3.  Run `npm install` to install the necessary dependencies.
-4.  Run `npm run test` to build the poster and start a development server with a live preview.
-5.  Run `npm run bundle` to bundle the poster to a single .zip file ready to ship to us.
+3.  Run <span class="copy">`npm install`</span> to install the necessary dependencies.
+4.  Run <span class="copy">`npm run test`</span> to build the poster and start a development server with a live preview.
+5.  Run <span class="copy">`npm run bundle`</span> to bundle the poster to a single .zip file ready to ship to us.
 
 </div>

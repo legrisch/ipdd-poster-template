@@ -68,11 +68,17 @@ ul.horizontal li {
   margin: 0 auto;
 }
 
-code {
-  padding: 0px 4px;
+.copy code {
+  padding: 0px 4px 0 2px;
   background-color: $highlightColor;
   border-radius: 4px;
   cursor: pointer;
+
+  &::before {
+    content: '🔗';
+    font-size: 0.98rem;
+    padding: 0 5px;
+  }
 
   &::after {
     content: '';
