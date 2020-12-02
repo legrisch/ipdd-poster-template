@@ -74,7 +74,8 @@ ipdd-poster-template/
   * [Parcel](https://v2.parceljs.org/) will help bundle your poster into one neat .zip package ready to ship to us. It starts from your main entry file – `src/index.html` – and works its way through all referenced files. If it's coming across an image in `src/index.html`, it will be added to the bundle. If there's another .js file referenced in `src/scripts/main.js` with `import { whatever } from './anotherJsFile.js'` it will be added to the bundle as well.
 * fallback images – todo
 
-The main entry file should not be altered. Everything else is subject to change on your side and the default merely put you in a good starting position. Again: everything that is referenced from `src/index.html` or its references will be included in the final bundle.
+Everything inside `src/index.html` is subject to change on your side and the defaults merely put you in a good starting position.  
+Again: everything that is referenced from `src/index.html` or its references will be included in the final bundle.
 
 #### Wrapping it up a.k.a. Bundling
 
