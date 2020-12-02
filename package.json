@@ -1,7 +1,7 @@
 {
   "name": "ipdd-poster-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A template to bootstrap a IPDD Poster",
   "scripts": {
     "test": "parcel serve test/index.html --open",
     "serve": "parcel serve src/index.html --open",
@@ -18,8 +18,11 @@
       "sourceMap": false
     }
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "IPDD",
+    "Template"
+  ],
+  "author": "Grischa Erbe",
   "license": "ISC",
   "devDependencies": {
     "adm-zip": "^0.5.1",
