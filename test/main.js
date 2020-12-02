@@ -1,6 +1,21 @@
 import marked from 'marked'
 import { readFileSync } from 'fs'
 import { join } from 'path'
+import ClipboardJS from 'clipboard'
+
+// eslint-disable-next-line no-new
+const clipboard = new ClipboardJS(':not(a) code', {
+  text: (trigger) => trigger.innerHTML,
+})
+
+clipboard.on('success', (e) => {
+  const { timeout } = e.trigger.dataset
+  if (timeout) clearTimeout(parseInt(timeout, 10))
+  e.trigger.classList.add('copied')
+  e.trigger.dataset.timeout = setTimeout(() => {
+    e.trigger.classList.remove('copied')
+  }, 2e3)
+})
 
 const readme = readFileSync(join(__dirname, '..', 'README.md'), 'utf-8')
 

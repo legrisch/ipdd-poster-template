@@ -1,11 +1,13 @@
 @import "normalize/import-now";
 
-$pillColor: rgb(255, 184, 184);
+$backgroundColor: rgb(255, 219, 219);
+$highlightColor: rgb(255, 184, 184);
+$successColor: rgb(134, 228, 126);
 $dotColor: #b8d4fe;
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgb(255, 219, 219);
+  background-color: $backgroundColor;
   font-size: 1.2rem;
   color: black;
 }
@@ -68,20 +70,46 @@ ul.horizontal li {
 
 code {
   padding: 0px 4px;
-  background-color: rgb(255, 184, 184);
+  background-color: $highlightColor;
   border-radius: 4px;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    padding: 0px 4px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px) rotateZ(0);
+    transition: transform 0.3s, opacity 0.3s;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: $successColor;
+    border-radius: 4px;
+  }
+  
+  &.copied {
+    position: relative;
+    
+    &::after {
+      content: 'copied!';
+      transform: translateX(-50%) translateY(0px) rotateZ(0);
+      opacity: 1;
+    }
+  }
 }
 
 .pill {
   padding: 1rem 2rem;
   display: inline-block;
-  background-color: $pillColor;
+  background-color: $highlightColor;
   align-self: flex-start;
   border-radius: 999px;
 }
 
 button {
-  background-color: rgb(255, 184, 184);
+  background-color: $highlightColor;
   border-radius: 999px;
   border: none;
   outline: none;
@@ -124,10 +152,14 @@ button {
 }
 
 pre {
-  padding: 0px 4px;
-  background-color: rgb(255, 184, 184);
+  padding: 15px 15px;
+  background-color: $highlightColor;
   border-radius: 4px;
   display: inline-block;
+}
+
+.card pre, .card code {
+  background-color: $backgroundColor;
 }
 
 pre code {
