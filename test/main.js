@@ -1,3 +1,11 @@
+import marked from 'marked'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+
+const readme = readFileSync(join(__dirname, '..', 'README.md'), 'utf-8')
+
+document.getElementById('readme').innerHTML = marked(readme)
+
 /* eslint-disable no-unused-vars */
 const iframe = document.getElementById('iframe')
 

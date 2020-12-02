@@ -20,128 +20,13 @@
     
     <ul class="horizontal">
       <li><a href="#readme" alt="readme">Readme</a></li>
-      <li>Contact</li>
+      <li>
+        <a href="https://t.me/legrisch" target="_blank">Contact</a>
+      </li>
     </ul>
   </section>
-  
-  <section id="readme" class="content-padding readme-container">
-    <h1>Readme</h1>
 
-    <p>
-      This template facilitates the creation of an IPDD Poster for the website ipdd.hfg-karlsruhe.de and should get you started in no time.
-    </p>
-
-    <h2>Features</h2>
-    <ul>
-      <li>
-        Transpiles ES6+ JavaScript using Babel
-      </li>
-      <li>
-        SASS/SCSS support
-      </li>
-      <li>
-        Linting using ESLint
-      </li>
-      <li>
-        Vendor-prefixes CSS using Autoprefixer
-      </li>
-      <li>
-        Minifies JavaScript and CSS
-      </li>
-      <li>
-        Watches for changes to your source files and rebuilds the poster automagically
-      </li>
-    </ul>
-
-    <h2>
-      Requirements
-    </h2>
-    <p>
-      To use this boilerplate you need to have Node.js installed:
-    </p>
-    <ul>
-      <li>
-        Install <a href="https://nodejs.org/en/" alt="nodejs">Node.js</a>
-      </li>
-    </ul>
-
-    <h2>
-      Boilerplate Installation
-    </h2>
-    <ol>
-      <li>
-        To download the boilerplate click on Download ZIP or clone this git repository.
-      </li>
-      <li>
-        Open Terminal.app and go to the poster directory: cd /path/to/poster/directory or drag the poster directory onto the Terminal icon.
-      </li>
-      <li>
-        Run <code>npm install</code> to install the necessary dependencies
-      </li>
-      <li>
-        Run <code>npm test</code> to build the poster and start a development server
-      </li>
-    </ol>
-
-    <div class="card">
-      <h3>
-        Walkthrough
-      </h3>
-  
-      <p>
-        This is a step-by-step walkthrough of how to set up this template in order to be able to develop an IPDD Poster.<br />
-        You may learn how to use an IDE (~ a proper code editor) and gain some knowledge about advanced web development.
-      </p>
-
-      <h4>Installing Requirements</h4>
-      <p>
-        To use this template you need to have these things installed:
-        <ul>
-          <li><a href="https://nodejs.org/en/" alt="nodejs">Node.js</a>. This is a JavaScript Runtime that is able to run outside of your browser and therefore lets you do things like read from and write to your disk or access your network. We use it as a development server (More on that later), to bundle our IPDD poster and compress it to a single .zip file. If you are on macOS, I strongly recommend installing Node.js together with a Node.js version management software. One of those is called <code>n</code>, it's great and dead simple, you can get it <a href="https://github.com/tj/n">here</a>.</li>
-          <li>An Editor of your choice, I strongly recommend (and base this guide on) <a href="https://code.visualstudio.com/" alt="vscode">Microsoft Visual Studio Code</a>, it's free! I will refer to it as VS Code from now on.</li>
-          <li class="optional">(Optional) git. It's preinstalled on macOS and Linux, however on Windows you need to install it separately. It's a version management tool. Think of it as a meaningful way to make backups inbetween development stages of your poster. If you have never worked with git before it can be a bit daunting at first, so make sure to <a href="https://rogerdudler.github.io/git-guide/index.de.html" alt="">get the basics</a> first. A good Git Client also facilitates an easier workflow, one of them is called Fork, get it <a href="https://git-fork.com/">here</a>.</li>
-        </ul>
-      </p>
-
-      <h4>
-        Checks & Additional Requirements
-      </h4>
-
-      <p>
-        Now that we installed everything we want to make sure that everything is running fine and on the fly gain some basic knowledge navigating the Terminal. As the majority of HfG students are using a Mac, this guide will from now on focus on working oin macOS. If you are on a different platform like Windows or Linux, feel free to contact us.<br />
-      </p>
-      <p>
-        First, we will open VS Code. It will as you to open a "Workspace" which is a fancy name for your project folder. This folder will contain everything that is needed to build your IPDD poster. This should be the folder you downloaded earlier.
-      </p>
-      <p>
-        Now that VS Code knows where to operate, open up a Terminal with <i>Terminal → New Terminal</i>, this opens a Terminal in the currently opened directory/workspace – very handy.<br />
-        Type in <code>node --version</code> and hit return. It should print something like "v14.15.1" which tells you that Node.js is correctly installed and running whatever version it printed.<br />
-      </p>
-      <p>
-        We will install an extension to VS Code called eslint. This extension tries to make sure that we write JavaScript that actually works by calling out probable errors and enforce a coding style on our code. Head to the extensions and install the extension "ESLint" by "Dirk Baeumer".
-      </p>
-      <p>
-        This template comes with a lot of features already built-in. To use them, we need to install the <i>dependencies</i>. For this we make use of <a href"https://www.npmjs.com/">npm</a>, Node.js' built-in package manager. All we have to do is use the already opened terminal, type in <code>npm install</code> and hit return – this might take a while.
-      </p>
-      
-
-      <h4>
-        Usage
-      </h4>
-      <p>
-        We are ready to actually use this template! So what's this fuzz all about? Let's start our development server. Go to your terminal again, type in <code>npm run test</code>. This should open up your browser, the addressbar should read something like <i>http://localhost:1234</i>. The poster you are developing lives inside <i>index.html</i> in your workspace. Change something there and save the file: you will see that your changes get reflected immediately. This is called hot module reloading and is only one of the perks of this template.
-      </p>
-      <p>
-        As long as you are developing your IPDD Poster, you will likely want to use <code>npm run test</code> to preview your poster the way it will be visible on the IPDD Website.
-      </p>
-      <p>
-        As soon as you are finished, use <code>npm run bundle</code> to compress it to a single .zip file and send it to us.
-      </p>
-    </div>
-
-    
-
-  </section>
+  <section id="readme" class="content-padding readme-container"></section>
 
   <script nomodule src="./main.js"></script>
   <script type="module" src="./main.js"></script>
