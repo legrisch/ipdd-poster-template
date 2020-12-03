@@ -68,40 +68,36 @@ ul.horizontal li {
   margin: 0 auto;
 }
 
-.copy code {
-  padding: 0px 4px 0 2px;
+code {
+  padding: 0px 6px;
   background-color: $highlightColor;
   border-radius: 4px;
-  cursor: pointer;
-
-  &::before {
-    content: '🔗';
-    font-size: 0.98rem;
-    padding: 0 5px;
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    padding: 0px 4px;
-    pointer-events: none;
-    opacity: 0;
-    transform: translateX(-50%) translateY(20px) rotateZ(0);
-    transition: transform 0.3s, opacity 0.3s;
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: $successColor;
-    border-radius: 4px;
-  }
   
-  &.copied {
-    position: relative;
-    
+  .copy & {
+    cursor: pointer;
+
     &::after {
-      content: 'copied!';
-      transform: translateX(-50%) translateY(0px) rotateZ(0);
-      opacity: 1;
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px) rotateZ(0);
+      transition: transform 0.3s, opacity 0.3s;
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: $successColor;
+      border-radius: 4px;
+    }
+    
+    &.copied {
+      position: relative;
+      
+      &::after {
+        content: 'copied!';
+        transform: translateX(-50%) translateY(0px) rotateZ(0);
+        opacity: 1;
+      }
     }
   }
 }
