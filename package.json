@@ -1,7 +1,8 @@
 {
   "name": "ipdd-poster-template",
   "version": "1.0.0",
-  "description": "A template to bootstrap a IPDD Poster",
+  "description": "A template to bootstrap an IPDD Poster",
+  "homepage": "https://ipdd.hfg-karlsruhe.de",
   "scripts": {
     "test": "parcel serve test/index.html --open",
     "serve": "parcel serve src/index.html --open",
@@ -22,7 +23,11 @@
     "IPDD",
     "Template"
   ],
-  "author": "Grischa Erbe",
+  "author": "Grischa Erbe <grischa.erbe@googlemail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/legrisch/ipdd-poster-template.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "adm-zip": "^0.5.1",
