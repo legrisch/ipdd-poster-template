@@ -86,6 +86,18 @@ Again: everything that is referenced from `src/index.html` or its references wil
 
 So you are finished with your poster, heh? There's just one more thing to do: Use the terminal, type in <span class="copy">`npm run bundle`</span> and hit return. This starts a bundling process which collects all files used in your poster and produces a single .zip file. Send this file to us and you're done, congratulations! 🎉
 
+____
+
+#### When something goes wrong
+
+If you feel like something is going sideways when previewing your page these are the things you can do to get back on track:
+
+* Delete the bundler cache folder `.parcel-cache`.
+* Delete the bundler dist folder `dist`.
+* Reinstall all dependencies:
+  1. Delete the folder `node_modules`.
+  2. Reinstall the dependencies as you did before with running <span class="copy">`npm install`</span> in a Terminal that is opened in the root directory of this template.
+
 </div>
 <div class="card">
 

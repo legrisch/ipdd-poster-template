@@ -68,6 +68,16 @@ ul.horizontal li {
   margin: 0 auto;
 }
 
+hr {
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+  height: 0;
+  background-color: transparent;
+  border-color: black;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
 code {
   padding: 0px 6px;
   background-color: $highlightColor;
