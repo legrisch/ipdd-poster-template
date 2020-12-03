@@ -47,39 +47,44 @@ This is the default file and directory structure:
 ```
 ipdd-poster-template/
 │
-└── src/                 This is the important directory for you
-    │
-    ├── assets/          images, videos, etc. go here
-    │
-    ├── fallback/        Fallback images
-    │   └── 600px.jpg    Template for a fallback image
-    │
-    ├── scripts/         .js files go here
-    │   ├── main.js      Your main application code
-    │   └── ready.js     DO NOT MODIFY THIS FILE
-    │
-    ├── styles/          .css, .scss files go here
-    │   └── main.scss    Your main application styles
-    │
-    └── index.html       Your main index.html file
+├── src/                 This is the important directory for you
+│   │
+│   ├── assets/          images, videos, etc. go here
+│   │
+│   ├── fallback/        Fallback images
+│   │   └── 600.jpg    Template for a fallback image
+│   │
+│   ├── scripts/         .js files go here
+│   │   ├── main.js      Your main application code
+│   │   └── ready.js     Do not modify
+│   │
+│   ├── styles/          .css, .scss files go here
+│   │   └── main.scss    Your main application styles
+│   │
+│   └── index.html       Your main index.html file
+│
+├── test/…                Do not modify – preview page
+└── bundler/…             Do not modify – bundle script
 ```
 
 * Your poster completely resides in the `src/` directory.
 * The main entrypoint of your poster will be `src/index.html`.
+  * It is entirely customizable, there's only one exception: It needs to include the script located in `src/scripts/ready.js`.
 * Put your stylesheets in `src/styles`.
   * Notice that the default file here `src/styles/main.scss` is a .scss file and makes using [sass](https://sass-lang.com/documentation) (a superset of css) possible. However if you don't feel confident to use sass, it is perfectly possible to write regular css in a .scss file.
 * Put your JavaScript in `src/scripts`.
   * [Babel](https://babeljs.io/) will [_transpile_](https://scotch.io/tutorials/javascript-transpilers-what-they-are-why-we-need-them) your JavaScript code automatically so that you can use the latest code and don't need to worry about supporting older browsers. Feel free to use [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), [async functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function), …
 * Put your assets like images and videos into `src/assets`.
   * [Parcel](https://v2.parceljs.org/) will help bundle your poster into one neat .zip package ready to ship to us. It starts from your main entry file – `src/index.html` – and works its way through all referenced files. If it's coming across an image in `src/index.html`, it will be added to the bundle. If there's another .js file referenced in `src/scripts/main.js` with `import { whatever } from './anotherJsFile.js'` it will be added to the bundle as well.
-* fallback images – todo
+* Put your fallback images in `src/fallback`
+  * Your poster will not be visible on mobile browsers to save bandwidth and make the website more accessible to users. To show the best representation of it, we want you to place fallback images in `src/fallback`. These images should always be square and will be placed in an image with a [srcset](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) attribute. In the [bundling step](#wrapping-it-up-aka-bundling) these images are analyzed and added to the bundle automatically, there's **no need to reference** them anywhere.
 
 Everything inside `src/index.html` is subject to change on your side and the defaults merely put you in a good starting position.  
 Again: everything that is referenced from `src/index.html` or its references will be included in the final bundle.
 
 #### Wrapping it up a.k.a. Bundling
 
-So you are finished with your poster, heh? There's just one more thing to do: Use the terminal, type in <span class="copy">`npm run bundle`</span> and hit return. This starts a bundling process which collects all files used in your poster and produces a single .zip file. Send this file to us, you're done, congratulations! 🎉
+So you are finished with your poster, heh? There's just one more thing to do: Use the terminal, type in <span class="copy">`npm run bundle`</span> and hit return. This starts a bundling process which collects all files used in your poster and produces a single .zip file. Send this file to us and you're done, congratulations! 🎉
 
 </div>
 <div class="card">
@@ -95,6 +100,7 @@ So you are finished with your poster, heh? There's just one more thing to do: Us
 *   Vendor-prefixes CSS using Autoprefixer
 *   Minifies JavaScript and CSS
 *   Watching for changes to source files and rebuilds the poster automatically i.e. hot module reloading
+*   Automatic fallback image bundling and static hosting
 
 ### Requirements
 
