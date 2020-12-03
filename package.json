@@ -5,7 +5,7 @@
   "scripts": {
     "test": "parcel serve test/index.html --open",
     "serve": "parcel serve src/index.html --open",
-    "bundle": "node ./bundler/bundler.js"
+    "bundle": "node ./bundler"
   },
   "browser": "dist/index.html",
   "targets": {
